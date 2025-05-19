@@ -1,9 +1,9 @@
 const Certifications = () => {
   const certifications = [
-    { name: 'Google Analytics', issuer: 'Google', date: 'Feb 2024' },
-    { name: 'AI & ML Learning', issuer: 'Microsoft', date: 'May 2024' },
-    { name: 'Quantium Data Analytics', issuer: 'Quantium', date: 'July 2024' },
-    // ... other certs
+    { name:  "Software Engineering ", issuer: 'LinkedIn', date: 'May 2024' },
+    { name: "App Development (React Native)", issuer: 'Coding Ninja', date: 'July 2024' },
+    { name:  "Web Development (MERN Stack) ", issuer: 'CodeWithHarry', date: 'September 2024' },
+    { name:  "DevOps Engineering " , issuer: 'Google', date: 'December 2024' },     
   ]
 
   return (

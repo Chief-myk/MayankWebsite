@@ -9,80 +9,54 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "Quantium Super Store Data Analysis",
-      description: "Analyzed purchasing trends and customer segments' chip-buying habits using Python, uncovering patterns and insights into preferences and behaviors.",
-      image: "/assets/proj_1.png",
-      tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
-      githubUrl: "#",
-      liveUrl: "#",
-      details: [
-        "Performed exploratory data analysis on retail transaction data",
-        "Identified key customer segments and their purchasing patterns",
-        "Created visualizations to showcase sales trends and product performance",
-        "Developed recommendations for inventory management and marketing strategies"
-      ]
-    },
-    {
-      id: 2,
-      title: "Web Performance Data Analysis Dashboard",
-      description: "Power BI dashboard analyzing key performance indicators, trends, and acquisition channels to identify optimization opportunities.",
-      image: "/assets/proj_2.jfif",
-      tags: ["Power BI", "DAX", "Data Modeling"],
-      githubUrl: "#",
-      liveUrl: "#",
-      details: [
-        "Integrated multiple data sources into a unified data model",
-        "Created interactive visualizations for traffic patterns and engagement metrics",
-        "Developed calculated measures using DAX for key metrics",
-        "Implemented drill-through functionality for detailed analysis"
-      ]
-    },
-    {
-      id: 3,
-      title: "Hospital Emergency Patients Visit Dashboard",
-      description: "Tableau dashboard analyzing emergency room data, providing insights into patient demographics, visit details, and satisfaction metrics.",
-      image: "/assets/proj_3.png",
-      tags: ["Tableau", "Data Visualization", "Healthcare Analytics"],
-      githubUrl: "#",
-      liveUrl: "#",
-      details: [
-        "Designed intuitive dashboard for hospital administrators",
-        "Highlighted peak times and patient wait times",
-        "Analyzed patient satisfaction correlation with various factors",
-        "Created predictive model for patient volume forecasting"
-      ]
-    },
-    {
-      id: 4,
-      title: "HR Attrition Dashboard",
-      description: "Excel dashboard analyzing employee turnover, providing insights into attrition rates, demographics, and education-related patterns.",
-      image: "/assets/proj_4.jfif",
-      tags: ["Excel", "Pivot Tables", "Data Analysis"],
-      githubUrl: "#",
-      liveUrl: "#",
-      details: [
-        "Developed comprehensive HR metrics dashboard",
-        "Identified key factors contributing to employee attrition",
-        "Created predictive model for attrition risk",
-        "Provided recommendations for retention strategies"
-      ]
-    },
-    {
-      id: 5,
-      title: "SQL Data Analytics Projects",
-      description: "SQL analysis of HR, Paytm, and Pharma datasets for business insights and marketing strategies.",
-      image: "/assets/proj_5.jfif",
-      tags: ["SQL", "Data Analysis", "Business Intelligence"],
-      githubUrl: "#",
-      liveUrl: "#",
-      details: [
-        "Analyzed employee data for HR insights and workforce planning",
-        "Examined pharmaceutical sales for market trends and opportunities",
-        "Evaluated Paytm e-purchase data for customer behavior analysis",
-        "Developed complex queries for business intelligence reporting"
-      ]
-    }
+  id: 1,
+  title: "Full Stack Portfolio",
+  description: "Designed and developed a personalized full stack portfolio from scratch, showcasing technical expertise and academic achievements. Implemented a modern UI with seamless animations and responsive design.",
+  image: "/assets/portfolio.jpg",
+  tags: ["React", "Tailwind CSS", "Vite", "JavaScript"],
+  githubUrl: "https://github.com/Chief-myk/YASHPAL-SIR-PROJECT",
+  liveUrl: "https://www.yashpalchopra.com/",
+  details: [
+    "Created a visually stunning portfolio with modern design and smooth animations",
+    "Integrated responsive UI using Tailwind CSS for consistent performance across devices",
+    "Implemented animations with GSAP for dynamic page transitions",
+    "Optimized performance using Vite for faster build times",
+    "Deployed on Vercel for reliable and scalable hosting"
+  ]
+},
+   {
+  id: 2,
+  title: "JARVIS AI System",
+  description: "Developed a cutting-edge AI assistant inspired by Iron Man's JARVIS, capable of controlling devices through voice commands and hand gestures for a futuristic, hands-free experience.",
+  image: "/assets/jarvis.jpg",
+  tags: ["Python", "Flask", "MediaPipe", "OpenCV", "Speech Recognition"],
+  githubUrl: "https://github.com/Chief-myk/Jarvis-Ai-Voice-Gesture-Control",
+  liveUrl: "https://jarvis-ai-voice-gesture-control.vercel.app/",
+  details: [
+    "Built an AI assistant with gesture control and voice command support",
+    "Integrated MediaPipe for real-time hand gesture recognition",
+    "Implemented system automation for volume control, mouse movements, and app management",
+    "Developed text-to-speech and speech recognition features for seamless interaction",
+    "Deployed a Flask-based server for real-time AI responses and command processing"
+  ]
+},
+
+   {
+  id: 3,
+  title: "Fit-Game - Gamified Fitness Platform",
+  description: "Created a unique fitness-based game where players must perform real-life physical actions to progress, blending exercise and entertainment for a healthier lifestyle.",
+  image: "/assets/fit-game.png",
+  tags: ["Python", "OpenCV", "MediaPipe", "Machine Learning", "Flask"],
+  githubUrl: "https://github.com/Chief-myk/Fit_Games",
+  liveUrl: "",
+  details: [
+    "Designed a fitness-focused game requiring real-life actions for gameplay progression",
+    "Integrated real-time pose detection using MediaPipe for accurate movement tracking",
+    "Developed a reward system to motivate users through fitness milestones",
+    "Incorporated Flask for backend management and real-time data processing",
+    "Optimized for smooth performance and low-latency response"
+  ]
+},
   ]
 
   const openModal = (project) => {
@@ -95,6 +69,7 @@ const Projects = () => {
     setIsModalOpen(false)
     document.body.style.overflow = 'auto'
   }
+  
 
   return (
     <section id="projects" className="py-20">
@@ -111,7 +86,7 @@ const Projects = () => {
             <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Here are some of my data analytics projects showcasing my skills in SQL, Python, Power BI, Tableau, and Excel.
+           Here are some of my innovative tech projects showcasing my expertise in AI, full-stack development, IoT, and 3D simulations.
           </p>
         </motion.div>
 
@@ -157,7 +132,7 @@ const Projects = () => {
       {isModalOpen && selectedProject && (
         <Modal onClose={closeModal}>
           <div className="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-2xl">
-            <div className="relative h-64 md:h-80 overflow-hidden">
+            <div className="relative h-64 md:h-58 overflow-hidden">
               <img 
                 src={selectedProject.image} 
                 alt={selectedProject.title} 

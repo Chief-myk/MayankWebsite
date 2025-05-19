@@ -68,8 +68,7 @@ const Resume = () => {
             <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">Resume</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Seasoned Data Analyst with 3 years of experience in Healthcare Benefits Analysis and a strong track record
-            of driving business strategies through data-driven insights.
+          Ambitious Computer Science Engineering student with hands-on experience in AI, full-stack development, and IoT. Skilled in building smart systems, immersive 3D simulations, and innovative tech solutions to bridge real-world challenges.
           </p>
         </motion.div>
 

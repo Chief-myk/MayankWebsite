@@ -3,10 +3,10 @@ import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FiGithub size={20} />, url: 'https://github.com', name: 'GitHub' },
-    { icon: <FiLinkedin size={20} />, url: 'https://linkedin.com', name: 'LinkedIn' },
-    { icon: <FiTwitter size={20} />, url: 'https://twitter.com', name: 'Twitter' },
-    { icon: <FiMail size={20} />, url: 'mailto:aakashsharma337@gmail.com', name: 'Email' }
+    { icon: <FiGithub size={20} />, url: 'https://github.com/Chief-myk/', name: 'GitHub' },
+    { icon: <FiLinkedin size={20} />, url: 'https://www.linkedin.com/in/mayankmittal1311/', name: 'LinkedIn' },
+    { icon: <FiTwitter size={20} />, url: 'https://x.com/MayankMittal06', name: 'Twitter' },
+    { icon: <FiMail size={20} />, url: 'mailto:mayankmittal1106@gmail.com', name: 'Email' }
   ]
 
   return (
@@ -38,8 +38,7 @@ const Footer = () => {
           </div>
           
           <div className="text-center text-gray-600 dark:text-gray-400 mb-8">
-            <p className="mb-2">In the realm of data, where numbers and chaos intertwine,</p>
-            <p>the data analyst brings clarity and insight, transforming complexity into simplicity.</p>
+            <p className="mb-2">"Driven by passion, fueled by innovation – creating technology that inspires and empowers the world."</p>
           </div>
           
           <div className="w-full border-t border-gray-200 dark:border-gray-700 mb-8"></div>

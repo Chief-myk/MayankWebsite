@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { FiMail, FiPhone, FiMapPin, FiDownload } from 'react-icons/fi'
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
+  const formRef = useRef(null)
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,17 +57,31 @@ const Contact = () => {
     setIsSubmitting(true)
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
+      // Fixed EmailJS method call
+      await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      
+      // Success - clear form and show success message
       setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      })
+      setFormData({ name: "", email: "", subject: "", message: "" })
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
+      
     } catch (error) {
+      console.log("EmailJS Error: ", error)
       setSubmitStatus('error')
+      
+      // Hide error message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
     } finally {
       setIsSubmitting(false)
     }
@@ -74,17 +91,17 @@ const Contact = () => {
     {
       icon: <FiMapPin size={24} className="text-orange-500" />,
       title: 'Location',
-      content: 'Ghaziabad, India'
+      content: 'New Delhi, India'
     },
     {
       icon: <FiMail size={24} className="text-orange-500" />,
       title: 'Email',
-      content: 'aakashsharma337@gmail.com'
+      content: 'mayankmittal1106@gmail.com'
     },
     {
       icon: <FiPhone size={24} className="text-orange-500" />,
       title: 'Phone',
-      content: '+91 7210099161'
+      content: '+91 9990538802'
     }
   ]
 
@@ -160,7 +177,7 @@ const Contact = () => {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
                 <input

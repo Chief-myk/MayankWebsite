@@ -3,9 +3,9 @@ import { FiDownload, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
 const Hero = () => {
   const socialLinks = [
-    { icon: <FiGithub size={24} />, url: 'https://github.com' },
-    { icon: <FiLinkedin size={24} />, url: 'https://linkedin.com' },
-    { icon: <FiTwitter size={24} />, url: 'https://twitter.com' }
+    { icon: <FiGithub size={24} />, url: 'https://github.com/Chief-myk/' },
+    { icon: <FiLinkedin size={24} />, url: 'https://www.linkedin.com/in/mayankmittal1311/' },
+    { icon: <FiTwitter size={24} />, url: 'https://x.com/MayankMittal06' }
   ]
 
   return (
@@ -22,10 +22,10 @@ const Hero = () => {
           <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">Mittal</span>
         </h1>
         <h2 className="text-2xl md:text-4xl font-bold text-gray-600 dark:text-gray-300 mb-6">
-          Data Analyst & Decision Support Specialist
+          Web And Mobile Devloper
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
-          Transforming complex data into actionable insights with expertise in Power BI, SQL, and Python.
+           Turning ideas into reality through innovative code and design.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -44,7 +44,8 @@ const Hero = () => {
             download
             className="px-8 py-3 border-2 border-orange-500 text-orange-500 dark:text-orange-400 rounded-full font-medium flex items-center gap-2 hover:bg-orange-500/10 transition-all"
           >
-            <FiDownload /> Download CV
+            <FiDownload /> 
+            Download CV
           </motion.a>
         </div>
         
@@ -73,7 +74,7 @@ const Hero = () => {
         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full blur-xl opacity-30"></div>
           <img 
-            src="/assets/shiv-ji.jpg" 
+            src="/assets/mayank.jpeg" 
             alt="Mayank Mittal" 
             className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-xl"
           />
